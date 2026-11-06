@@ -1,0 +1,41 @@
+---
+title: "Median Household Income in Florida"
+format: html
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+
+fl_income <- get_acs(
+  geography = "county",
+  variables = "B19013_001",
+  state = "FL",
+  year = 2022,
+  geometry = TRUE,
+  progress_bar = FALSE
+)
+```
+
+This page shows county-level median household income across Florida from the U.S. Census Bureau's American Community Survey (`data.census.gov`, table `B19013`).
+
+```{r}
+fl_income |>
+  ggplot(aes(fill = estimate)) +
+  geom_sf(color = "white", linewidth = 0.2) +
+  scale_fill_viridis_c(
+    option = "magma",
+    labels = scales::label_dollar()
+  ) +
+  labs(
+    title = "Median Household Income by County in Florida",
+    subtitle = "2018–2022 American Community Survey (5-Year Estimates)",
+    fill = "Median Income",
+    caption = "Source: U.S. Census Bureau (data.census.gov, Table B19013)"
+  ) +
+  theme_void()
+```

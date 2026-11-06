@@ -1,0 +1,5 @@
+---
+title: "About"
+---
+
+This website explores county-level median household income across Florida using data from the U.S. Census Bureau's American Community Survey ([data.census.gov](https://data.census.gov/), Table `B19013`).
