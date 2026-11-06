@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Median Household Income in Florida",
+    "section": "",
+    "text": "This page shows county-level median household income across Florida from the U.S. Census Bureau’s American Community Survey (data.census.gov, table B19013)."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website explores county-level median household income across Florida using data from the U.S. Census Bureau’s American Community Survey (data.census.gov, Table B19013)."
+  }
+]
